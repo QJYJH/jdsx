@@ -17,13 +17,13 @@ from llama_index.core.ingestion import IngestionPipeline
 from llama_index.core.schema import BaseNode, TextNode
 from llama_index.core.vector_stores import MetadataFilters, MetadataFilter, FilterOperator
 
-from llama_index.llms.ollama import Ollama
-from llama_index.embeddings.ollama import OllamaEmbedding
+from llama_index.llms.openai_like import OpenAILike
+from llama_index.embeddings.xinference import XinferenceEmbedding
 from llama_index.vector_stores.chroma import ChromaVectorStore
 
 import chromadb
 
-# from .stores.candidate_store import CandidateStore
+from .data_db.candidate_store import CandidateStore
 
 logger = logging.getLogger(__name__)
 
